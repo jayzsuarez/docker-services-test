@@ -1,0 +1,27 @@
+version: "3.4"
+
+services:
+  cards-api:
+    image: "api-service-one:0.0.1-SNAPSHOT"
+    ports:
+      - 6088:6088
+    container_name: "api-service-one"
+  client-api:
+    image: "api-service-two:0.0.1-SNAPSHOT"
+    ports:
+      - 6089:6089
+    container_name: "api-service-two"
+  wiremock:
+    container_name: wiremock
+    command:
+      - --verbose
+      -  'true'
+      - --port
+      - '6543'
+    image: rodolpheche/wiremock:2.29.0
+    ports:
+      - 6543:6543
+
+networks:
+  default:
+    name: backend
