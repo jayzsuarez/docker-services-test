@@ -4,10 +4,10 @@ How to Run:
 
 1) Navigate to cards-api
 
-  > Run: docker build -t pi-service-one:0.0.1-SNAPSHOT .
+  > Run: docker build -t api-service-one:0.0.1-SNAPSHOT .
 
 2) Navigate to cards-api
-  > Run: docker build -t pi-service-two:0.0.1-SNAPSHOT .
+  > Run: docker build -t api-service-two:0.0.1-SNAPSHOT .
 
 3) Run the services
   > docker-compose up
